@@ -6,48 +6,29 @@ public class VariaveiseConstantes {
 
 	public static void main(String[] args) {
 		
-		Scanner leia = new Scanner(System.in); 
+		Scanner ler = new Scanner(System.in);
 		
-		int quantidade;
-		long identificador;
-		float altura; 
-		double area;
-		char tipo;
-		String frase;
-		boolean ativo;
+		float nota01, nota02, nota03, media;
 		
-		System.out.println("\nDigite um valor para a Variável quantidade (int):");
-		quantidade = leia.nextInt();
+		System.out.println("\nDigite a primeira nota: ");
+		nota01 = ler.nextFloat();
 		
-		System.out.println("\nDigite um valor para a Variável identificador (long): ");
-		identificador = leia.nextLong();
+		System.out.println("\nDigite a segunda nota: ");
+		nota02 = ler.nextFloat();
 		
-		System.out.println("\nDigite um valor para a Variável altura (float): ");
-		altura = leia.nextFloat();
+		System.out.println("\nDigite a terceira nota: ");
+		nota03 = ler.nextFloat();
 		
-		System.out.println("\nDigite um valor para a Variável area (double): ");
-		area = leia.nextDouble();
+		media = (nota01 + nota02 + nota03)/3;
 		
-		System.out.println("\nDigite um valor para a Variável tipo (char): ");
-		tipo = leia.next().charAt(0);
+		if (media >= 7) {
+			System.out.println("\nParabéns! Sua nota final foi "+media+" você passou");
+		}else if(media == 6){
+			System.out.println("Sua nota foi "+media+ "você está de recuperação!");
+		}else {
+			System.out.println("Sua nota foi "+media+" você está reprovado!");
+		}
 		
-		System.out.println("\nDigite um valor para a Variável frase (String): ");
-		leia.skip("\\R?");
-		frase = leia.nextLine();
-		
-		System.out.println("\nDigite um valor para a Variável ativo (boolean)");
-		ativo = leia.nextBoolean();
-		
-		
-		System.out.println("\nDados recebidos via teclado:\n");
-		
-		System.out.println("\nVariável quantidade ="+quantidade);
-		System.out.println("\nVariável identificador = " + identificador);
-		System.out.println("\nVariável altura = " + altura);
-		System.out.println("\nVariável area = " + area);
-		System.out.println("\nVariável tipo = " + tipo);
-		System.out.println("\nVariável palavra = " + frase);
-		System.out.println("\nVariável tamanho = " + ativo);
 	}
 
 }
