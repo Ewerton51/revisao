@@ -6,28 +6,28 @@ public class VariaveiseConstantes {
 
 	public static void main(String[] args) {
 		
+		int opcao;
 		Scanner ler = new Scanner(System.in);
 		
-		float nota01, nota02, nota03, media;
+		System.out.println("# ## ### #### #########   Menu   ########## #### ### ## #");
+		System.out.println("\n--Digite 1 para ver a indicação de um livro--");
+		System.out.println("\n--Digite 2 para ler uma frase motivacional--");
+		System.out.println("\n--Digite 3 para receber uma indicação de música--");
+		opcao = ler.nextInt();
 		
-		System.out.println("\nDigite a primeira nota: ");
-		nota01 = ler.nextFloat();
-		
-		System.out.println("\nDigite a segunda nota: ");
-		nota02 = ler.nextFloat();
-		
-		System.out.println("\nDigite a terceira nota: ");
-		nota03 = ler.nextFloat();
-		
-		media = (nota01 + nota02 + nota03)/3;
-		
-		if (media >= 7) {
-			System.out.println("\nParabéns! Sua nota final foi "+media+" você passou");
-		}else if(media == 6){
-			System.out.println("Sua nota foi "+media+ "você está de recuperação!");
-		}else {
-			System.out.println("Sua nota foi "+media+" você está reprovado!");
-		}
+		switch(opcao) {
+			case 1:
+				System.out.println("Livro: As Crônicas de Nárnia - Volume único1");
+				break;
+			case 2:
+				System.out.println("Se você cair, levante! Não dá para andar deitado.");
+				break;
+			case 3:
+				System.out.println("Galantis - Gold Dust");
+				break;
+				default:
+					System.out.println("Opção inválida!");
+		}		
 		
 	}
 
